@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: explore-retail-demo-config
+  name: explore-retail-demo-lvs
   namespace: explore-retail-demo
 
 data:
