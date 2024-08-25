@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: explore-retail-demo-app
+  name: explore-retail-demo-config
   namespace: explore-retail-demo
 
 data:
