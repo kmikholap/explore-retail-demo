@@ -50,7 +50,7 @@ spec:
   ports:
   - port: 2222
     targetPort: 22
-    nodePort: 30222 
+    nodePort: 32222 
     protocol: TCP
     name: ssh
   - port: 5000
