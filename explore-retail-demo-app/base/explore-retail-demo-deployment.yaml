@@ -55,7 +55,7 @@ spec:
     name: ssh
   - port: 5000
     targetPort: 80
-    nodePort: 30500  
+    nodePort: 35555 
     protocol: TCP
     name: app
   selector:
