@@ -3,7 +3,7 @@ kind: Kustomization
 metadata:
   name: patch-kustomization
   namespace: default
-bases:
+resources:
   - ../../base  
   - bcn-patch-data.yaml
 patches:
