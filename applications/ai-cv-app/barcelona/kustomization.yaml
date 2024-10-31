@@ -3,9 +3,9 @@ kind: Kustomization
 metadata:
   name: bcn-patch-kustomization
   namespace: ai-cv-app
-resources:
+bases:
   - ../base  
   - bcn-patch-data.yaml
-patchesStrategicMerge:
+patches:
   - bcn-patch.yaml
   
