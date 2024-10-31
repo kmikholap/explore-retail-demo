@@ -8,4 +8,7 @@ resources:
   - bcn-patch-data.yaml
 patches:
   - path: bcn-patch.yaml
-  
+    target:
+      kind: Deployment
+      name: ai-cv-app-deployment
+      namespace: default
