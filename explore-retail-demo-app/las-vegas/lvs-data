@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: explore-retail-demo-app
-  namespace: explore-retail-demo
-
-data:
-  DEVICE_NAME: "GPU"
-  VIDEO_URL: "rtsp://demo:VMwareEdge@172.22.22.100/axis-media/media.amp?fps=30"
