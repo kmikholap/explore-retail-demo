@@ -4,7 +4,7 @@ metadata:
   name: base-kustomization
   namespace: default
 resources:
-  - deployment.yaml
+  - ai-cv-app.yaml
 
 
 
