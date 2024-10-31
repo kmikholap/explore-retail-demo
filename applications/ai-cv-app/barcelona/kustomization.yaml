@@ -7,5 +7,5 @@ bases:
   - ../base  
   - bcn-patch-data.yaml
 patches:
-  - bcn-patch.yaml
+  - path: bcn-patch.yaml
   
