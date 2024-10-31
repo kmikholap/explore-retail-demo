@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: explore-retail-demo
+  namespace: explore-retail-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: explore-retail-demo
+  template:
+    metadata:
+      labels:
+        app: explore-retail-demo
+    spec:
+      containers:
+      - name: explore-retail-demo
+        image: kmikholap/explore-retail-demo:v1
+        securityContext:
+          privileged: true
+          capabilities:
+            add: ["SYS_ADMIN"] 
+        volumeMounts:
+        - name: dri
+          mountPath: /dev/dri
+        - name: devdir
+          mountPath: /dev
+        - name: sysdir
+          mountPath: /sys
+      volumes:
+      - name: sysdir
+        hostPath:
+          path: /sys
+          type: Directory
+      - name: devdir
+        hostPath:
+          path: /dev
+          type: Directory
+      - name: dri
+        hostPath:
+          path: /dev/dri
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: oexplore-retail-demo
+  namespace: explore-retail-demo
+spec:
+  type: NodePort
+  ports:
+  - port: 2222
+    targetPort: 22
+    nodePort: 32222 
+    protocol: TCP
+    name: ssh
+  - port: 5000
+    targetPort: 5000
+    nodePort: 32555 
+    protocol: TCP
+    name: app
+  selector:
+    app: explore-retail-demo
