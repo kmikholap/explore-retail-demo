@@ -3,6 +3,5 @@ kind: Kustomization
 metadata:
   name: base-app-kustomization
 resources:
-  - namespace.yaml
   - deployment.yaml
 

@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: ai-cv-config
-  namespace: ai-cv-app
+  namespace: default
 
 data:
   DEVICE_NAME: "GPU"

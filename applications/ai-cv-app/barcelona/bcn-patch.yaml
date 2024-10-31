@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ai-cv-app-deployment
-  namespace: ai-cv-app
+  namespace: default
 spec:
   template:
     spec:
