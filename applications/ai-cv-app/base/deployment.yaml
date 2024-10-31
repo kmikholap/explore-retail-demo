@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: explore-retail-demo
-  namespace: explore-retail-demo
+  name: ai-cv-app-deployment
+  namespace: ai-cv-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: explore-retail-demo
+      app: ai-cv-app
   template:
     metadata:
       labels:
-        app: explore-retail-demo
+        app: ai-cv-app
     spec:
       containers:
-      - name: explore-retail-demo
+      - name: ai-cv-app
         image: kmikholap/explore-retail-demo:v1
         securityContext:
           privileged: true
@@ -43,8 +43,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: oexplore-retail-demo
-  namespace: explore-retail-demo
+  name: ai-cv-app-svc
+  namespace: ai-cv-app
 spec:
   type: NodePort
   ports:
@@ -59,4 +59,4 @@ spec:
     protocol: TCP
     name: app
   selector:
-    app: explore-retail-demo
+    app: ai-cv-app

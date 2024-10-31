@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: explore-retail-demo
-  namespace: explore-retail-demo
+  name: ai-cv-patch
+  namespace: ai-cv-app
 spec:
   template:
     spec:
       containers:
-      - name: explore-retail-demo
+      - name: ai-cv-app
         env:
         - name: DEVICE_NAME
           valueFrom:
             configMapKeyRef:
-              name: explore-retail-demo-lvs
+              name: ai-cv-config
               key: DEVICE_NAME
         - name: VIDEO_URL
           valueFrom:
             configMapKeyRef:
-              name: explore-retail-demo-lvs
+              name: ai-cv-config
               key: VIDEO_URL
         
