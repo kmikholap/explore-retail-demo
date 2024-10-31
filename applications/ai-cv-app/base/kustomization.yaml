@@ -4,6 +4,5 @@ metadata:
   name: base-app-kustomization
   namespace: flux-system
 resources:
-  - namespace.yaml
   - deployment.yaml
 
