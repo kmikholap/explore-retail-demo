@@ -50,12 +50,12 @@ spec:
   ports:
   - port: 2222
     targetPort: 22
-    nodePort: 32222 
+    nodePort: 32200 
     protocol: TCP
     name: ssh
   - port: 5000
     targetPort: 5000
-    nodePort: 32555 
+    nodePort: 32500
     protocol: TCP
     name: app
   selector:
