@@ -6,11 +6,8 @@ metadata:
 resources:
   - ../../base  
   - bcn-patch-data.yaml
-  
+
 patchesStrategicMerge:
   - bcn-patch.yaml
 
 namePrefix: project-
-
-spec:
-  prune: true
