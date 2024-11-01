@@ -4,10 +4,25 @@ metadata:
   name: retail-demo
   namespace: default
 spec:
-  interval: 5m
+  interval: 10m
   url: https://github.com/kmikholap/explore-retail-demo.git
   ref:
     branch: master
+
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: ai-cv-app-base
+  namespace: default
+spec:
+  interval: 10m
+  sourceRef:
+    kind: GitRepository
+    name: retail-demo
+  path: ./applications/ai-cv-app/base
+  prune: true
+  timeout: 1m
+
 
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -17,10 +32,10 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./ai-cv-app/sites/barcelona" 
+  path: "./applications/ai-cv-app/sites/barcelona" 
   prune: true  
   sourceRef:
     kind: GitRepository
     name: retail-demo 
   dependsOn:
-    - name: ai-cv-app-deployment 
+    - name: ai-cv-app-base
