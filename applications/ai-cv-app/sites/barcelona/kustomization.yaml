@@ -8,9 +8,9 @@ resources:
   - bcn-patch-data.yaml
 
 patches:
-   - target:
+  - target:
       group: apps
       version: v1
       kind: Deployment
       name: ai-cv-app-deployment
-  path: bcn-patch.yaml
+  - path: bcn-patch.yaml
