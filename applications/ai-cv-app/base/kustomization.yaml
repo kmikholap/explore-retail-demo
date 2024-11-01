@@ -5,6 +5,8 @@ metadata:
   namespace: default
 resources:
   - ai-cv-app.yaml
+patches:
+  - path: bcn-patch.yaml
 
 
 

@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-cv-app-deployment
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - name: ai-cv-app
+          env:
+            - name: DEVICE_NAME
+              value: "GPU"  # Static value for testing
