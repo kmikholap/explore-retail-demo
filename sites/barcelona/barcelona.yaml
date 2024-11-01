@@ -44,7 +44,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: explore-retail-demo-apps
-  path: "./sites/barcelona
+  path: ./sites/barcelona
   prune: true  
   dependsOn:
     - name: ai-cv-app-base
