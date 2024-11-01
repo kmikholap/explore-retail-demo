@@ -17,7 +17,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./ai-cv-app/overlays/barcelona" 
+  path: "./ai-cv-app/sites/barcelona" 
   prune: true  
   sourceRef:
     kind: GitRepository
