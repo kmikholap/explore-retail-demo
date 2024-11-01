@@ -8,3 +8,5 @@ resources:
   - bcn-patch-data.yaml
 patches:
   - path: bcn-patch.yaml
+
+namePrefix: project-
