@@ -32,7 +32,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  path: "./ai-cv-app/sites/barcelona" 
+  path: "./sites/barcelona" 
   prune: true  
   sourceRef:
     kind: GitRepository
