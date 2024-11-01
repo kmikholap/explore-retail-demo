@@ -23,4 +23,4 @@ spec:
     kind: GitRepository
     name: retail-demo 
   dependsOn:
-    - name: ai-cv-app-base  
+    - name: ai-cv-app-deployment 
