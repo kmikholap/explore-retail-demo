@@ -3,11 +3,5 @@ kind: Deployment
 metadata:
   name: ai-cv-app-deployment
   namespace: default
-spec:
-  template:
-    spec:
-      containers:
-        - name: ai-cv-app
-          env:
-            - name: DEVICE_NAME
-              value: "GPU"
+  labels:
+    test-label: "true"  # Adding a label for a minor change
